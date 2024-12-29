@@ -12,13 +12,56 @@ public class Item : MonoBehaviour
     public Sprite spriteItem;
     public bool isDelete = false;
 
+    public bool isPicked;
 
+    public bool thisIsBush; //Переменная флаг для неудаляемых кустов
+
+    public GameObject nullBushGO; //Пустой (собранный) куст
+    public bool itemReady; //предмет вырос и готов к собиранию
+    public bool isCorountineStart = false;
+
+    private void Start()
+    {
+         
+    }
     public void Update()
     {
-        if(isDelete == true)
+        if (isDelete && !thisIsBush)
         {
             Destroy(this.gameObject);
         }
+
+        if (thisIsBush && isPicked && !isCorountineStart) // Добавлено условие для проверки isCorountineStart
+        {
+            BushGrow();
+        }
+    }
+
+    public void BushGrow() // Рост куста
+    {
+        isCorountineStart = true;
+        StartCoroutine(GrowingBush());
+    }
+
+    public IEnumerator GrowingBush()
+    {
+        Debug.Log("Начинаем рост куста");
+        ReplaceWithNullBush();
+        yield return new WaitForSeconds(5f);
+        ReplaceWithFullBush();
+        Debug.Log("Куст вырос");
+        isPicked = false;
+        isCorountineStart = false; // Сбрасываем флаг после завершения корутины
+    }
+    private void ReplaceWithNullBush()
+    {
+        print("МОДЕЛЬКА ПОМЕНЯЛАСЬ");
+        nullBushGO = gameObject;
+    }
+    private void ReplaceWithFullBush()
+    {
+        print("МОДЕЛЬКА ПОМЕНЯЛАСЬ 2");
+        itemGO = gameObject;
     }
 
 }

@@ -98,6 +98,7 @@ public class Inventory : MonoBehaviour
                 AudioManager.instance.Play("pickupItemSound");
                 Debug.Log("ЛОГИКА ВЫПОЛНЯЕТСЯ");
                 AddItem(currentItem, 1); // Добавляем 1 экземпляр предмета в инвентарь
+                _item.isPicked = true;
                 _item.isDelete = true;
                 currentItem = null; // Сбрасываем currentItem после добавления в инвентарь
             }
