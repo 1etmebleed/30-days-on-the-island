@@ -5412,7 +5412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1523997688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5996,6 +5996,7 @@ MonoBehaviour:
   thisIsBush: 1
   nullBushGO: {fileID: 919132149155446097, guid: c3c122e93532e7747a71f6c0f74a17f4, type: 3}
   itemReady: 0
+  isCorountineStart: 0
 --- !u!1 &1778028277
 GameObject:
   m_ObjectHideFlags: 0
