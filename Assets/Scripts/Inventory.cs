@@ -93,7 +93,7 @@ public class Inventory : MonoBehaviour
         }
         if (isInTrigger && Input.GetKeyDown(KeyCode.E))
         {
-            if (currentItem != null && itemIsReady == true)
+            if (currentItem != null && itemIsReady == true && _item.itemReady==true)
             {
                 AudioManager.instance.Play("pickupItemSound");
                 Debug.Log("ËÎÃÈÊÀ ÂÛÏÎËÍßÅÒÑß");

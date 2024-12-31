@@ -1,67 +1,88 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    [Header("Настройка предмета, ОБЯЗАТЕЛЬНО ДОЛЖЕН БЫТЬ С ТЕГОМ item!")]
+    [Header("")]
 
-    public ItemScriptableObject item;
-    public int amount; //Сколько кол-ва предметов мы подбираем
-    public GameObject itemGO;
-    public Sprite spriteItem;
+    [Header("Ссылка на предмет")]
+    public ItemScriptableObject item; //предмет
+
+    [Header("Иконка подбираемого предмета")]
+    public Sprite spriteItem; //спрайт предмета
+
+    [Header("Количество подбираемых предметов за нажатие")]
+    public int amount; // Сколько кол-ва предметов мы подбираем
+
+    [Header("Наполненный куст ИЛИ просто предмет если это не куст!")]
+    public GameObject itemGO; //Полный куст
+
+    [Header("пустой куст ЕСЛИ это отрастающий куст (НИЖЕ ГАЛОЧКА)")]
+    public GameObject nullBushGO; // Пустой (собранный) куст
+
+    [Header("ДЛЯ ОТРАСТАЮЩЕГО КУСТА!")]
+    [Header("Если это ОТРАСТАЮЩИЙ КУСТ!")]
+    public bool thisIsBush; // Переменная флаг для неудаляемых кустов
+
+    [Header("Время роста куста")]
+    public float bushGrowTime;
+
+    [Header("Ставить галочку на пустом кусте!")]
+    public bool isGrowStart = false;
+    [Header("Ставить галочку на вырасшем кусте!")]
+    public bool itemReady; // Предмет вырос и готов к собиранию
+
+
+    [Header("НЕ ТРОГАТЬ!")]
     public bool isDelete = false;
-
+    [Header("НЕ ТРОГАТЬ!")]
     public bool isPicked;
-
-    public bool thisIsBush; //Переменная флаг для неудаляемых кустов
-
-    public GameObject nullBushGO; //Пустой (собранный) куст
-    public bool itemReady; //предмет вырос и готов к собиранию
-    public bool isCorountineStart = false;
 
     private void Start()
     {
-         
+        // Инициализация, если нужно
     }
-    public void Update()
+
+    private void Update()
     {
         if (isDelete && !thisIsBush)
         {
             Destroy(this.gameObject);
         }
 
-        if (thisIsBush && isPicked && !isCorountineStart) // Добавлено условие для проверки isCorountineStart
+        if (thisIsBush && isPicked)
         {
-            BushGrow();
+            // Убедитесь, что метод BushGrow вызывается только один раз
+            if (itemReady)
+            {
+
+                // Создаем новый объект nullBushGO на месте текущего объекта
+                GameObject newBush = Instantiate(nullBushGO, transform.position, transform.rotation);
+
+                // Уничтожаем текущий объект
+                Destroy(this.gameObject);
+
+                itemReady = false; // Сбрасываем флаг, чтобы не вызывать метод снова
+                isGrowStart = true;
+            }
+            
+        }
+        if (isGrowStart)
+        {
+            StartCoroutine(bushGoGrow());
         }
     }
+    public void GrowStart()
+    {
 
-    public void BushGrow() // Рост куста
-    {
-        isCorountineStart = true;
-        StartCoroutine(GrowingBush());
     }
+    public IEnumerator bushGoGrow()
+    {
+        yield return new WaitForSeconds(bushGrowTime);
 
-    public IEnumerator GrowingBush()
-    {
-        Debug.Log("Начинаем рост куста");
-        ReplaceWithNullBush();
-        yield return new WaitForSeconds(5f);
-        ReplaceWithFullBush();
-        Debug.Log("Куст вырос");
-        isPicked = false;
-        isCorountineStart = false; // Сбрасываем флаг после завершения корутины
-    }
-    private void ReplaceWithNullBush()
-    {
-        print("МОДЕЛЬКА ПОМЕНЯЛАСЬ");
-        nullBushGO = gameObject;
-    }
-    private void ReplaceWithFullBush()
-    {
-        print("МОДЕЛЬКА ПОМЕНЯЛАСЬ 2");
-        itemGO = gameObject;
-    }
+        Destroy(this.gameObject);
 
+        GameObject newBush = Instantiate(itemGO, transform.position, transform.rotation);
+    }
 }
