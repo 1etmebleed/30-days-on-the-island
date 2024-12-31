@@ -22,6 +22,7 @@ public class Item : MonoBehaviour
     public GameObject nullBushGO; // Пустой (собранный) куст
 
     [Header("ДЛЯ ОТРАСТАЮЩЕГО КУСТА!")]
+
     [Header("Если это ОТРАСТАЮЩИЙ КУСТ!")]
     public bool thisIsBush; // Переменная флаг для неудаляемых кустов
 
