@@ -9,6 +9,7 @@ public class ItemTree : MonoBehaviour
     public GameObject leaves;
     public GameObject pinok;
     public GameObject Stolb;
+    public GameObject ShakedGO;
     public GameObject log; //префаб дерева которое можно подобрать
 
     [SerializeField] public int hitCount = 0;
@@ -91,7 +92,7 @@ public class ItemTree : MonoBehaviour
 
     private IEnumerator ShakeTree()
     {
-        Vector3 originalPosition = Stolb.transform.position;
+        Vector3 originalPosition = ShakedGO.transform.position;
         float shakeDuration = 0.5f; // Продолжительность тряски
         float shakeMagnitude = 0.1f; // Амплитуда тряски
 
@@ -100,12 +101,12 @@ public class ItemTree : MonoBehaviour
         {
             float x = Random.Range(-shakeMagnitude, shakeMagnitude);
             float y = Random.Range(-shakeMagnitude, shakeMagnitude);
-            Stolb.transform.position = new Vector3(originalPosition.x + x, originalPosition.y + y, originalPosition.z);
+            ShakedGO.transform.position = new Vector3(originalPosition.x + x, originalPosition.y + y, originalPosition.z);
 
             elapsed += Time.deltaTime;
             yield return null;
         }
 
-        Stolb.transform.position = originalPosition; // Возвращаем на исходную позицию
+        ShakedGO.transform.position = originalPosition; // Возвращаем на исходную позицию
     }
 }
