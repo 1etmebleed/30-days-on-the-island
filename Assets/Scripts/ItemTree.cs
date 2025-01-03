@@ -53,15 +53,22 @@ public class ItemTree : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && destroyReady)
         {
-            hitCount++;
-            particleSystem.Play();
+            if(hitCount <  hitNeed)
+            {
+                AudioManager.instance.Play("hitWood");
+                hitCount++;
+                particleSystem.Play();
 
-            StartCoroutine(ShakeTree());
+                StartCoroutine(ShakeTree());
 
-            AudioManager.instance.Play("hitWood");
+                if(hitCount == hitNeed)
+                {
+                    StartCoroutine(StolbSoundDropped());
+                }
+            }
+
             if (hitCount == 5)
             {
-                StartCoroutine(StolbSoundDropped());
                 Destroy(leaves);
                 pinok.gameObject.SetActive(true);
                 Stolb.GetComponent<Rigidbody>().isKinematic = false;
