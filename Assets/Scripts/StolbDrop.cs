@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class StolbDrop : MonoBehaviour
 {
     public ItemTree ItemTree;
 
     public GameObject stolbGO;
+
+    public GameObject logPrefab;
     public float timer; //время удаления столба
     void Start()
     {
@@ -25,7 +28,9 @@ public class StolbDrop : MonoBehaviour
     public IEnumerator DeleteStolb(float Time)
     {
         yield return new WaitForSeconds(Time);
+        GameObject newLog = Instantiate(logPrefab, transform.position, transform.rotation);
         Destroy(stolbGO.gameObject);
+        
     }
 
 }

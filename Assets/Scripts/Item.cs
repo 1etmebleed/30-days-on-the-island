@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Item : MonoBehaviour
 {
@@ -40,9 +41,16 @@ public class Item : MonoBehaviour
     [Header("НЕ ТРОГАТЬ!")]
     public bool isPicked;
 
-    private void Start()
+    public bool isOutlined;
+    public Outline outline; // Ссылка на компонент Outline
+
+    public void Start()
     {
-        // Инициализация, если нужно
+        outline = GetComponent<Outline>(); // Получаем компонент Outline
+        if (outline != null)
+        {
+            outline.enabled = false; // Сначала отключаем подсветку
+        }
     }
 
     private void Update()

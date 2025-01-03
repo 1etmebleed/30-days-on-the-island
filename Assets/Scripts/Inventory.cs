@@ -153,6 +153,10 @@ public class Inventory : MonoBehaviour
         if (other.CompareTag("Item"))
         {
             Item itemComponent = other.GetComponent<Item>();
+            if(_item.isOutlined == true)
+            {
+                _item.outline.enabled = true;
+            }
             if (itemComponent != null)
             {
                 currentItem = itemComponent.item; // Предполагаем, что itemData - это ваш ItemScriptableObject
@@ -166,9 +170,14 @@ public class Inventory : MonoBehaviour
     {
         if (other.CompareTag("Item"))
         {
+            if (_item.isOutlined == true)
+            {
+                _item.outline.enabled = false;
+            }
             isInTrigger = false; // Сбрасываем флаг при выходе из триггера
             itemIsReady = false;
             currentItem = null; // Сбрасываем текущий предмет
+            _item = null;
             Debug.Log("Объект вышел из триггера: " + other.name);
         }
     }

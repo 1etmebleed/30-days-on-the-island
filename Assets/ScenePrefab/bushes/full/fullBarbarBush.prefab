@@ -72,6 +72,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a154905632954ec4dbd54e578a806752, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1898952780229208085}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a154905632954ec4dbd54e578a806752, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2660674442916121879}
   m_SourcePrefab: {fileID: 100100000, guid: a154905632954ec4dbd54e578a806752, type: 3}
 --- !u!1 &6105934075532964694 stripped
 GameObject:
@@ -101,9 +104,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &5137772098426664751
 BoxCollider:
@@ -124,8 +127,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.11467832, y: 0.11050903, z: 0.05475087}
-  m_Center: {x: 0.0020922946, y: -0.010879278, z: 0.027873177}
+  m_Size: {x: 0.08104629, y: 0.08645279, z: 0.05475087}
+  m_Center: {x: 0.003993454, y: -0.0041580107, z: 0.027873177}
 --- !u!65 &7207254130626947145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -160,13 +163,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 0f3eb134ad07c3746854ed038cfe36b0, type: 2}
-  amount: 1
   spriteItem: {fileID: 21300000, guid: 8c1c5314679b0b843836e01f916f8795, type: 3}
-  isDelete: 0
-  isPicked: 0
-  thisIsBush: 1
+  amount: 1
   itemGO: {fileID: 6105934075532964694}
   nullBushGO: {fileID: 5501928983289858990, guid: 95bab5eaf005ad94ebc966947f46d801, type: 3}
+  thisIsBush: 1
+  bushGrowTime: 0
   isGrowStart: 0
   itemReady: 1
-  bushGrowTime: 0
+  isDelete: 0
+  isPicked: 0
+  isOutlined: 1
+  outline: {fileID: 0}
+--- !u!114 &2660674442916121879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105934075532964694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.9137255, g: 0.4977637, b: 0.09803919, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
