@@ -18,4 +18,5 @@ public class GameManager : MonoBehaviour
         Cursor.SetCursor(cursorTexture, hotSpot, CursorMode.Auto);
     }
 
+
 }

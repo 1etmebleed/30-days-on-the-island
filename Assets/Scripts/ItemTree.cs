@@ -14,6 +14,8 @@ public class ItemTree : MonoBehaviour
     [SerializeField] public int hitCount = 0;
     [SerializeField] public int hitNeed = 5;
 
+    public ParticleSystem particleSystem; // Система частиц
+
     public bool isDropped = false;
 
 
@@ -52,6 +54,10 @@ public class ItemTree : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && destroyReady)
         {
             hitCount++;
+            particleSystem.Play();
+
+            StartCoroutine(ShakeTree());
+
             AudioManager.instance.Play("hitWood");
             if (hitCount == 5)
             {
@@ -76,4 +82,23 @@ public class ItemTree : MonoBehaviour
         AudioManager.instance.Play("treeFallingSound");
     }
 
+    private IEnumerator ShakeTree()
+    {
+        Vector3 originalPosition = Stolb.transform.position;
+        float shakeDuration = 0.5f; // Продолжительность тряски
+        float shakeMagnitude = 0.1f; // Амплитуда тряски
+
+        float elapsed = 0.0f;
+        while (elapsed < shakeDuration)
+        {
+            float x = Random.Range(-shakeMagnitude, shakeMagnitude);
+            float y = Random.Range(-shakeMagnitude, shakeMagnitude);
+            Stolb.transform.position = new Vector3(originalPosition.x + x, originalPosition.y + y, originalPosition.z);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        Stolb.transform.position = originalPosition; // Возвращаем на исходную позицию
+    }
 }

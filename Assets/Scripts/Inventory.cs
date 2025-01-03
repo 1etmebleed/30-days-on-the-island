@@ -7,9 +7,6 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public GameObject UIpanel;
-    public GameObject UIpanel2; //прозрачная панель инвентаря
-    public GameObject quickPanel;
     public Transform inventoryPanel; //Игровой объект панели инвентаря
     public List<InventorySlot> slots = new List<InventorySlot>();
 
@@ -29,13 +26,16 @@ public class Inventory : MonoBehaviour
 
     public GameObject[] spritesGear; //спрайты слотов снаряжения
 
-    public GameObject CraftSlot; //image UI GO слот который открывает меню крафта
+    public GameObject[] ElementsInventory;//элементы UI которые скрываются при нажатии tab
 
-    public GameObject GuideSlot; //image UI GO слот который открывает меню гайд книжки
+    public GameObject[] ElementsCraft;
 
-    public GameObject HealthImage; // иконка хп
+    public GameObject[] ElementsStats;
 
-    public GameObject HungryImage; //иконка еды
+    public GameObject[] ElementsGuide;
+
+    public GameObject GlobalPanel;
+
 
     void Start()
     {
@@ -47,8 +47,7 @@ public class Inventory : MonoBehaviour
                 slots.Add(inventoryPanel.GetChild(i).GetComponent<InventorySlot>());
             }
         }
-        UIpanel.SetActive(false);
-        UIpanel2.SetActive(false);
+        GlobalPanel.SetActive(false);
     }
 
     void Update()
@@ -59,14 +58,9 @@ public class Inventory : MonoBehaviour
             if(isOpen)
             {
                 AudioManager.instance.Play("openBackpack");
-                UIpanel.SetActive(true);
-                UIpanel2.SetActive(true);
-                quickPanel.SetActive(false);
+                GlobalPanel.SetActive(true);
                 Cursor.lockState = CursorLockMode.Confined; // разблокируем курсор
-                CraftSlot.SetActive(true);
-                GuideSlot.SetActive(true);
-                HealthImage.SetActive(false);
-                HungryImage.SetActive(false);
+
 
                 for (int i =0; i<spritesGear.Length;i++)
                 {
@@ -76,14 +70,9 @@ public class Inventory : MonoBehaviour
             else
             {
                 AudioManager.instance.Play("closeBackpack");
-                UIpanel.SetActive(false);
-                UIpanel2.SetActive(false);
-                quickPanel.SetActive(true);
+                GlobalPanel.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked; // Блокируем курсор
-                CraftSlot.SetActive(false);
-                GuideSlot.SetActive(false);
-                HealthImage.SetActive(true);
-                HungryImage.SetActive(true);
+
 
                 for (int i = 0; i < spritesGear.Length; i++)
                 {
@@ -182,4 +171,89 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void ButtonInventory()
+    {
+        //выключаем
+        for (int i = 0; i < ElementsCraft.Length; i++)
+        {
+            ElementsCraft[i].SetActive(false);
+        }
+        for (int i = 0; i < ElementsStats.Length; i++)
+        {
+            ElementsStats[i].SetActive(false);
+        }
+        for(int i = 0;i<ElementsGuide.Length; i++)
+        {
+            ElementsGuide[i].SetActive(false);
+        }
+        //включаем
+        for (int i = 0; i < ElementsInventory.Length; i++)
+        {
+            ElementsInventory[i].SetActive(true);
+        }
+    }
+
+    public void ButtonCraft()
+    {
+        //выключаем
+        for (int i = 0; i < ElementsGuide.Length; i++)
+        {
+            ElementsGuide[i].SetActive(false);
+        }
+        for (int i = 0; i < ElementsStats.Length; i++)
+        {
+            ElementsStats[i].SetActive(false);
+        }
+        for(int i = 0;i<ElementsInventory.Length; i++)
+        {
+            ElementsInventory[i].SetActive(false);
+        }
+        //включаем
+        for (int i = 0; i < ElementsCraft.Length; i++)
+        {
+            ElementsCraft[i].SetActive(true);
+        }
+    }
+    public void ButtonGuide()
+    {
+        //выключаем
+        for (int i = 0; i < ElementsStats.Length; i++)
+        {
+            ElementsStats[i].SetActive(false);
+        }
+        for (int i = 0; i < ElementsInventory.Length; i++)
+        {
+            ElementsInventory[i].SetActive(false);
+        }
+        for (int i = 0; i < ElementsCraft.Length; i++)
+        {
+            ElementsCraft[i].SetActive(false);
+        }
+        //включаем
+        for (int i = 0; i < ElementsGuide.Length; i++)
+        {
+            ElementsGuide[i].SetActive(true);
+        }
+    }
+    public void ButtonStats()
+    {
+        //выключаем
+        for (int i = 0; i < ElementsInventory.Length; i++)
+        {
+            ElementsInventory[i].SetActive(false);
+        }
+        for (int i = 0; i < ElementsCraft.Length; i++)
+        {
+            ElementsCraft[i].SetActive(false);
+        }
+        for (int i = 0; i < ElementsGuide.Length; i++)
+        {
+            ElementsGuide[i].SetActive(false);
+        }
+        //включаем
+        for (int i = 0; i < ElementsStats.Length; i++)
+        {
+            ElementsStats[i].SetActive(true);
+        }
+    }
 }
