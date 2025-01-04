@@ -24,7 +24,7 @@ public class ItemTree : MonoBehaviour
 
     public void Start()
     {
-        pinok.gameObject.SetActive(false);
+        //pinok.gameObject.SetActive(false);
         // Убедитесь, что у Stolb есть Rigidbody
         if (Stolb.GetComponent<Rigidbody>() == null)
         {

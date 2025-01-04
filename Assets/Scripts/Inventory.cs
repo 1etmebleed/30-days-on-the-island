@@ -36,6 +36,8 @@ public class Inventory : MonoBehaviour
 
     public GameObject GlobalPanel;
 
+    public GameObject QuickPanel;
+
 
     void Start()
     {
@@ -48,6 +50,9 @@ public class Inventory : MonoBehaviour
             }
         }
         GlobalPanel.SetActive(false);
+        QuickPanel.SetActive(true);
+
+        
     }
 
     void Update()
@@ -57,6 +62,7 @@ public class Inventory : MonoBehaviour
             isOpen = !isOpen;
             if(isOpen)
             {
+                QuickPanel.SetActive(false);
                 AudioManager.instance.Play("openBackpack");
                 GlobalPanel.SetActive(true);
                 Cursor.lockState = CursorLockMode.Confined; // разблокируем курсор
@@ -69,6 +75,7 @@ public class Inventory : MonoBehaviour
             }
             else
             {
+                QuickPanel.SetActive(true);
                 AudioManager.instance.Play("closeBackpack");
                 GlobalPanel.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked; // Блокируем курсор

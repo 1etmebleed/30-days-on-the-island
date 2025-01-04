@@ -16,6 +16,7 @@ MonoBehaviour:
   itemType: 0
   itemGO: {fileID: 4308966849088047520, guid: 926fbb76b158c64438d3abe3c31629d0, type: 3}
   itemSprite: {fileID: 21300000, guid: 3f7c6444994d08b459888102c0b7e904, type: 3}
+  itemShowName: "\u041A\u0430\u043C\u0435\u043D\u044C"
   maxAmount: 12
   itemDescription: "\u041D\u0435\u0431\u043E\u043B\u044C\u0448\u043E\u0439 \u043E\u0441\u0442\u0440\u044B\u0439
     \u043A\u0430\u043C\u0435\u043D\u044C"

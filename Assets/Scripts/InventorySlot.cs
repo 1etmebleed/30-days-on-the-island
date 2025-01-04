@@ -83,7 +83,9 @@ public class InventorySlot : MonoBehaviour
         panelSlotIsOpen = true;
         panelSlot.SetActive(true);
         currentlyOpenPanel = this; // Устанавливаем текущую открытую панель
-        spriteSlotPanel.GetComponent<Image>().sprite = spriteSlot;
+        panelSlot.GetComponent<Image>().sprite = item.itemSprite;
+        Description.text = item.itemDescription;
+
 
         // Блокируем все остальные кнопки
         BlockOtherButtons(true);
@@ -123,18 +125,21 @@ public class InventorySlot : MonoBehaviour
     }
     public void DropButton()
     {
-        if(item.isUsed==true)
+        if(amount > 0)
         {
-            Instantiate(item.itemPrefab);
+            Instantiate(item.itemPrefab, transform.position, transform.rotation);
             amount--;
         }
 
     }
     public void UseButton()
     {
-        amount--;
-        player.healthPlayer += foodItem.health;
-        player.hungryPlayer += foodItem.hungry;
+        if(item.isUsed == true && amount > 0)
+        {
+            amount--;
+            player.healthPlayer += foodItem.health;
+            player.hungryPlayer += foodItem.hungry;
+        }
     }
     public void UIchecker()
     {

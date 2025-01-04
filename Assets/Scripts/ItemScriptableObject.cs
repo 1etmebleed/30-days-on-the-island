@@ -11,6 +11,7 @@ public class ItemScriptableObject : ScriptableObject
     public GameObject itemGO; //префаб предмета
     public Sprite itemSprite; // Иконка предмета
     static public string itemName; //Название предмета   
+    public string itemShowName; //отображаемое имя предмета в инвентаре
     public int maxAmount;
     public string itemDescription;
     public GameObject itemPrefab;
