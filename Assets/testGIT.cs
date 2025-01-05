@@ -7,7 +7,7 @@ public class testGIT : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        while (true) { print("zxc");}
     }
 
     // Update is called once per frame
