@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isUsed: 0
   itemType: 0
-  itemGO: {fileID: 0}
-  itemSprite: {fileID: 0}
-  itemShowName: 
-  maxAmount: 0
-  itemDescription: 
-  itemPrefab: {fileID: 0}
+  itemGO: {fileID: 1326228349268875614, guid: a75e9e89a82364e43be7b600c95dbdd9, type: 3}
+  itemSprite: {fileID: 21300000, guid: afb227b9bac3b8243a4e7fd000dd829d, type: 3}
+  itemShowName: "\u041A\u043E\u043A\u043E\u0441"
+  maxAmount: 12
+  itemDescription: "\u041D\u0443\u0436\u043D\u043E \u0440\u0430\u0441\u043A\u043E\u043B\u043E\u0442\u044C"
+  itemPrefab: {fileID: 1326228349268875614, guid: a75e9e89a82364e43be7b600c95dbdd9, type: 3}
   health: 0
   hungry: 0
