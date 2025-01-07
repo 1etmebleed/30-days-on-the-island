@@ -83,7 +83,7 @@ public class InventorySlot : MonoBehaviour
         panelSlotIsOpen = true;
         panelSlot.SetActive(true);
         currentlyOpenPanel = this; // Устанавливаем текущую открытую панель
-        panelSlot.GetComponent<Image>().sprite = item.itemSprite;
+        spriteSlotPanel.GetComponent<Image>().sprite = item.itemSprite;
         Description.text = item.itemDescription;
 
 

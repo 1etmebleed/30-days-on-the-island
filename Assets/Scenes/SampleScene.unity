@@ -458,11 +458,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8831e1e539dd544cb0c42f204bed6a7, type: 3}
---- !u!1 &43335894 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4159963127460404484, guid: e8831e1e539dd544cb0c42f204bed6a7, type: 3}
-  m_PrefabInstance: {fileID: 880093596}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &43335895 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1837761700721195253, guid: e8831e1e539dd544cb0c42f204bed6a7, type: 3}
@@ -473,7 +468,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8531817778916128111, guid: e8831e1e539dd544cb0c42f204bed6a7, type: 3}
   m_PrefabInstance: {fileID: 880093596}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 43335894}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb6e2849fa7683a4e9096874a1b1f264, type: 3}
@@ -7140,6 +7135,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &701981804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4338237982030077937, guid: e8831e1e539dd544cb0c42f204bed6a7, type: 3}
+  m_PrefabInstance: {fileID: 880093596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -8088,7 +8088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4338237982030077937, guid: e8831e1e539dd544cb0c42f204bed6a7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5974634357100981506, guid: e8831e1e539dd544cb0c42f204bed6a7, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8201,7 +8201,7 @@ PrefabInstance:
     - target: {fileID: 8531817778916128111, guid: e8831e1e539dd544cb0c42f204bed6a7, type: 3}
       propertyPath: panelSlot
       value: 
-      objectReference: {fileID: 1568076825}
+      objectReference: {fileID: 701981804}
     - target: {fileID: 8531817778916128111, guid: e8831e1e539dd544cb0c42f204bed6a7, type: 3}
       propertyPath: nullPanelSlot
       value: 
@@ -8213,7 +8213,7 @@ PrefabInstance:
     - target: {fileID: 8531817778916128111, guid: e8831e1e539dd544cb0c42f204bed6a7, type: 3}
       propertyPath: spriteSlotPanel
       value: 
-      objectReference: {fileID: 43335894}
+      objectReference: {fileID: 1568076825}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -9244,7 +9244,7 @@ Transform:
   m_GameObject: {fileID: 1136483924}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2216, y: 3.61, z: 847.58}
+  m_LocalPosition: {x: 56.83, y: 3.1, z: 31.75}
   m_LocalScale: {x: 2.20649, y: 2.20649, z: 2.20649}
   m_ConstrainProportionsScale: 0
   m_Children: []
