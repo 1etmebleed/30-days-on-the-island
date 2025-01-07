@@ -26,9 +26,10 @@ public class InventorySlot : MonoBehaviour
     public GameObject panelSlot;
     public Sprite nullPanelSlot;
 
-    public TextMeshProUGUI text;
+    public TextMeshProUGUI textAmount;
 
     public TextMeshProUGUI Description;
+    public TextMeshProUGUI textName;
     public bool isEmpty => item == null || amount <= 0; // Слот считается пустым, если нет предмета или количество равно нулю
     public bool panelSlotIsOpen = false;
 
@@ -54,8 +55,8 @@ public class InventorySlot : MonoBehaviour
 
     private void UpdateText()
     {
-        text.text = amount.ToString();
-        text.gameObject.SetActive(amount > 0);
+        textAmount.text = amount.ToString();
+        textAmount.gameObject.SetActive(amount > 0);
     }
 
     void TogglePanel()
@@ -85,6 +86,7 @@ public class InventorySlot : MonoBehaviour
         currentlyOpenPanel = this; // Устанавливаем текущую открытую панель
         spriteSlotPanel.GetComponent<Image>().sprite = item.itemSprite;
         Description.text = item.itemDescription;
+        textName.text = item.itemShowName;
 
 
         // Блокируем все остальные кнопки
