@@ -10078,7 +10078,7 @@ Transform:
   m_GameObject: {fileID: 1136483924}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.83, y: 3.1, z: 31.75}
+  m_LocalPosition: {x: 1622.1, y: 4.2, z: 1452.9}
   m_LocalScale: {x: 2.20649, y: 2.20649, z: 2.20649}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11893,7 +11893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c6a6df342b52d24092cf6bbb590c535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveHeight: 0.1
+  waveHeight: 0.05
   waveFrequency: 0.1
   waveLength: 0.5
   waveOriginPosition: {x: 0, y: 0, z: 0}
