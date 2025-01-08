@@ -129,8 +129,9 @@ public class InventorySlot : MonoBehaviour
     {
         if(amount > 0)
         {
-            Instantiate(item.itemPrefab, transform.position, transform.rotation);
+            Instantiate(item.itemPrefab, playerTransform.position, playerTransform.rotation);
             amount--;
+            print("кнопка нажата");
         }
 
     }
