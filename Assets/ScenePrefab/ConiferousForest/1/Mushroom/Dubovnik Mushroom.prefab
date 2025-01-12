@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &596437992069200527
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 197129c14993c88419ac2ea3bdc3d45e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 197129c14993c88419ac2ea3bdc3d45e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 197129c14993c88419ac2ea3bdc3d45e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 197129c14993c88419ac2ea3bdc3d45e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 197129c14993c88419ac2ea3bdc3d45e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 197129c14993c88419ac2ea3bdc3d45e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 197129c14993c88419ac2ea3bdc3d45e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 197129c14993c88419ac2ea3bdc3d45e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 197129c14993c88419ac2ea3bdc3d45e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 197129c14993c88419ac2ea3bdc3d45e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 197129c14993c88419ac2ea3bdc3d45e, type: 3}
+      propertyPath: m_Name
+      value: Dubovnik Mushroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 197129c14993c88419ac2ea3bdc3d45e, type: 3}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 197129c14993c88419ac2ea3bdc3d45e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3332006938277889977}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 197129c14993c88419ac2ea3bdc3d45e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6254684694595334686}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 197129c14993c88419ac2ea3bdc3d45e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1703000984363127737}
+  m_SourcePrefab: {fileID: 100100000, guid: 197129c14993c88419ac2ea3bdc3d45e, type: 3}
+--- !u!1 &326388791698376670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 197129c14993c88419ac2ea3bdc3d45e, type: 3}
+  m_PrefabInstance: {fileID: 596437992069200527}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3332006938277889977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326388791698376670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6e1d62342cfa97428f90456436245fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: f16fcb1ffb2507642a251dd17431b7ff, type: 2}
+  spriteItem: {fileID: 21300000, guid: f1dc76b303b26cb449b8f65cbd328d53, type: 3}
+  amount: 1
+  itemGO: {fileID: 326388791698376670}
+  nullBushGO: {fileID: 0}
+  thisIsBush: 0
+  bushGrowTime: 0
+  isGrowStart: 0
+  itemReady: 1
+  isDelete: 0
+  isPicked: 1
+  isOutlined: 1
+  outline: {fileID: 0}
+--- !u!65 &6254684694595334686
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326388791698376670}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019108834, y: 0.018624285, z: 0.01775327}
+  m_Center: {x: 0.00036403324, y: 0.00008330942, z: 0.00855199}
+--- !u!114 &1703000984363127737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326388791698376670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.8980392, g: 0.4627451, b: 0.14901961, a: 1}
+  outlineWidth: 3
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

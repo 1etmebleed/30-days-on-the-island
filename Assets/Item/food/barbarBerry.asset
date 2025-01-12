@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a870fc4c641e2404b876700bb2187606, type: 3}
   m_Name: barbarBerry
   m_EditorClassIdentifier: 
-  isUsed: 0
-  itemType: 0
+  isUsed: 1
+  itemType: 2
   itemGO: {fileID: 7336491306546346211, guid: cc6ebad33062c674486ffd5fd8e94891, type: 3}
   itemSprite: {fileID: 21300000, guid: c89fcba9a9ca64649a1dca8c6489beb6, type: 3}
   itemShowName: "\u042F\u0433\u043E\u0434\u0430 \u0431\u0430\u0440\u0431\u0430\u0440"

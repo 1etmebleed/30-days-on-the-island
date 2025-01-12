@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fish
   m_EditorClassIdentifier: 
   isUsed: 0
-  itemType: 0
+  itemType: 2
   itemGO: {fileID: 3815889104924135960, guid: c3ca4de02bca39147bbb75344b44a9ff, type: 3}
   itemSprite: {fileID: 21300000, guid: 1d8e4a2a5abe52e4996cf666e0c098fe, type: 3}
   itemShowName: "\u0421\u044B\u0440\u0430\u044F \u0420\u044B\u0431\u0430"

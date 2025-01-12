@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DevilMushroom
   m_EditorClassIdentifier: 
   isUsed: 1
-  itemType: 0
+  itemType: 2
   itemGO: {fileID: 3612758684962403964, guid: 6d6d2c6aef9a7ea43920171306820b9e, type: 3}
   itemSprite: {fileID: 0}
   itemShowName: "\u0414\u044C\u044F\u0432\u043E\u043B\u044C\u0441\u043A\u0438\u0439
