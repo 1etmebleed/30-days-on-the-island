@@ -12,9 +12,15 @@ public class StolbDrop : MonoBehaviour
     public float timer; // время удаления столба
     public float pushForce = 5f; // сила толчка
 
+    public Outline outline;
+
     void Start()
     {
-
+        outline = GetComponent<Outline>(); // Получаем компонент Outline
+        if (outline != null)
+        {
+            outline.enabled = false; // Сначала отключаем подсветку
+        }
     }
 
     // Update is called once per frame

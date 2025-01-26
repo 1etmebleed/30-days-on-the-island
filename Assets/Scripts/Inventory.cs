@@ -14,7 +14,9 @@ public class Inventory : MonoBehaviour
 
     public ItemScriptableObject currentItem; // Ссылка на текущий предмет
 
-    public Item _item; 
+    public Item _item;
+
+    public ItemFood food;
 
     private bool isInTrigger = false;
 
@@ -112,8 +114,7 @@ public class Inventory : MonoBehaviour
             Debug.Log("Проверка слота: " + (slot.item != null ? slot.item.name : "null") + " на равенство с " + item.name);
             if (slot.item == item)
             {
-                slot.amount += amount; // Увеличиваем количество
-                
+                slot.amount += _item.amount; // Увеличиваем количество
                 return; // Предмет уже добавлен
             }
         }
@@ -124,13 +125,13 @@ public class Inventory : MonoBehaviour
             Debug.Log("Проверка на пустоту слота: " + slot.isEmpty);
             if (slot.isEmpty) // Если слот пустой
             {
-                if(_item.spriteItem == null)
+                if(item.itemSprite == null)
                 {
                     return;
                 }
-                slot.gameObject.GetComponent<Image>().sprite = _item.spriteItem;
+                slot.gameObject.GetComponent<Image>().sprite = item.itemSprite;
                 slot.item = item; // Добавляем предмет
-                slot.amount = amount; // Устанавливаем количество
+                slot.amount = _item.amount; // Устанавливаем количество
                 
                 Debug.Log("Добавил в ячейку: " + item.name);
                 return; // Успешно добавили предмет
@@ -148,8 +149,9 @@ public class Inventory : MonoBehaviour
         _item = other.GetComponent<Item>();
         if (other.CompareTag("Item"))
         {
+
             Item itemComponent = other.GetComponent<Item>();
-            if(_item.isOutlined == true)
+            if (_item.isOutlined == true)
             {
                 _item.outline.enabled = true;
             }

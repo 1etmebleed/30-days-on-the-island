@@ -70,7 +70,7 @@ public class ItemTree : MonoBehaviour
 
             if (hitCount == 5)
             {
-                Destroy(leaves);
+                //Destroy(leaves);
                 pinok.gameObject.SetActive(true);
                 Stolb.GetComponent<Rigidbody>().isKinematic = false;
                 Stolb.transform.SetParent(null);

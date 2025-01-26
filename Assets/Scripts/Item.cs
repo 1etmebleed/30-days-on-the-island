@@ -10,11 +10,10 @@ public class Item : MonoBehaviour
     [Header("Ссылка на предмет")]
     public ItemScriptableObject item; //предмет
 
-    [Header("Иконка подбираемого предмета")]
-    public Sprite spriteItem; //спрайт предмета
-
     [Header("Количество подбираемых предметов за нажатие")]
     public int amount; // Сколько кол-ва предметов мы подбираем
+
+    [Header("ДЛЯ ОТРАСТАЮЩЕГО КУСТА!")]
 
     [Header("Наполненный куст ИЛИ просто предмет если это не куст!")]
     public GameObject itemGO; //Полный куст
@@ -22,7 +21,6 @@ public class Item : MonoBehaviour
     [Header("пустой куст ЕСЛИ это отрастающий куст (НИЖЕ ГАЛОЧКА)")]
     public GameObject nullBushGO; // Пустой (собранный) куст
 
-    [Header("ДЛЯ ОТРАСТАЮЩЕГО КУСТА!")]
 
     [Header("Если это ОТРАСТАЮЩИЙ КУСТ!")]
     public bool thisIsBush; // Переменная флаг для неудаляемых кустов

@@ -12,13 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a870fc4c641e2404b876700bb2187606, type: 3}
   m_Name: mushroomFox
   m_EditorClassIdentifier: 
+  isDefault: 0
+  isWeapons: 0
+  isFood: 1
+  isTool: 0
   isUsed: 1
   itemType: 2
   itemGO: {fileID: 2948917324282579210, guid: 850e98745e7c6dc40baf33585e35da09, type: 3}
   itemSprite: {fileID: 21300000, guid: f22412846f7c47e4191869ef7f2d93fc, type: 3}
+  itemShowName: 
   maxAmount: 12
   itemDescription: "\u0421\u0430\u043C\u044B\u0435 \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u044B\u0435
     \u0433\u0440\u0438\u0431\u044B \u043D\u0430 \u0441\u0432\u0435\u0442\u0435"
   itemPrefab: {fileID: 2948917324282579210, guid: 850e98745e7c6dc40baf33585e35da09, type: 3}
-  health: 5
-  hungry: 3
+  health: 1
+  hungry: 1
+  endurance: 0
+  damage: 0

@@ -5,7 +5,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public Texture2D cursorTexture; 
-    public Vector2 hotSpot = Vector2.zero; 
+    public Vector2 hotSpot = Vector2.zero;
+
+    public GameObject panelCook;
     void Start()
     {
         AudioManager.instance.Play("soundtrack");

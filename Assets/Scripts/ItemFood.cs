@@ -6,11 +6,18 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Food Item",menuName = "Inventory/Items/New Food Item")]
 public class ItemFood : ItemScriptableObject
 {
-    public int health;
-    public int hungry;
+    //public int health;
+    //public int hungry;
 
-    public void Start()
-    {
-        itemType = Itemtype.Food;
-    }
+    //private void OnEnable()
+    //{
+    //    itemType = Itemtype.Food;
+    //}
+    //public void Use(PlayerController player)
+    //{
+    //    Debug.Log("Using food item");
+    //    player.healthPlayer += health;
+    //    player.hungryPlayer += hungry;
+    //    Debug.Log($"New health: {player.healthPlayer}, New hunger: {player.hungryPlayer}");
+    //}
 }

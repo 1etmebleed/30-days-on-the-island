@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a870fc4c641e2404b876700bb2187606, type: 3}
   m_Name: barbarBerry
   m_EditorClassIdentifier: 
+  isDefault: 0
+  isWeapons: 0
+  isFood: 1
+  isTool: 0
   isUsed: 1
   itemType: 2
   itemGO: {fileID: 7336491306546346211, guid: cc6ebad33062c674486ffd5fd8e94891, type: 3}
@@ -21,5 +25,7 @@ MonoBehaviour:
   itemDescription: "\u041D\u0430 \u0432\u043A\u0443\u0441 \u043A\u0430\u043A \u0433\u0440\u0443\u0448\u0430,
     \u0447\u0442\u043E \u044D\u0442\u043E?"
   itemPrefab: {fileID: 7336491306546346211, guid: cc6ebad33062c674486ffd5fd8e94891, type: 3}
-  health: 5
+  health: 1
   hungry: 0
+  endurance: 0
+  damage: 0

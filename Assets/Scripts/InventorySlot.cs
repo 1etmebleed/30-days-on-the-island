@@ -1,3 +1,5 @@
+using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,8 +37,11 @@ public class InventorySlot : MonoBehaviour
 
     private static InventorySlot currentlyOpenPanel; // Ссылка на открытую панель
 
+    public Button useButton; //ссылка на кнопку use 
+
     public void Start()
     {
+        player = FindObjectOfType<PlayerController>();
         panelSlot.SetActive(false);
         UpdateText();
 
@@ -45,6 +50,10 @@ public class InventorySlot : MonoBehaviour
         {
             button.onClick.AddListener(TogglePanel);
         }
+        //if (useButton != null)
+        //{
+            //useButton.onClick.AddListener(() => UseButton());
+        //}
     }
 
     public void Update()
@@ -127,9 +136,12 @@ public class InventorySlot : MonoBehaviour
     }
     public void DropButton()
     {
-        if(amount > 0)
+        float rand = UnityEngine.Random.Range(-0.8f, 0.8f); // Используем Random.Range для получения случайного значения
+        float rand2 = UnityEngine.Random.Range(-0.8f, 0.8f);
+        Vector3 transformDrop = new Vector3(playerTransform.position.x + rand, playerTransform.position.y + 0.2f, playerTransform.position.z + rand2);
+        if (amount > 0)
         {
-            Instantiate(item.itemPrefab, playerTransform.position, playerTransform.rotation);
+            Instantiate(item.itemPrefab, transformDrop, playerTransform.rotation);
             amount--;
             print("кнопка нажата");
         }
@@ -137,11 +149,26 @@ public class InventorySlot : MonoBehaviour
     }
     public void UseButton()
     {
-        if(item.isUsed == true && amount > 0)
+        PlayerController player = FindObjectOfType<PlayerController>();
+
+        if (player != null && item.isFood == true)
         {
-            amount--;
-            player.healthPlayer += foodItem.health;
-            player.hungryPlayer += foodItem.hungry;
+            // Используем предмет на игроке
+            if (item.isUsed)
+            {
+                player.healthPlayer += item.health;
+                player.hungryPlayer += item.hungry;
+                AudioManager.instance.Play("eatSound");
+                amount--;
+            }
+            else
+            {
+                Debug.Log("Item cannot be used.");
+            }
+        }
+        else
+        {
+            Debug.LogError("PlayerController not found in the scene!");
         }
     }
     public void UIchecker()

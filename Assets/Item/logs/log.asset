@@ -12,12 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49efc2ff7785bf40a0f7029a1bdd6c3, type: 3}
   m_Name: log
   m_EditorClassIdentifier: 
+  isDefault: 0
+  isWeapons: 0
+  isFood: 0
+  isTool: 0
   isUsed: 0
   itemType: 0
   itemGO: {fileID: 0}
-  itemSprite: {fileID: 0}
-  itemShowName: "\u041D\u0435\u043E\u0431\u0440\u0430\u0431\u043E\u0442\u0430\u043D\u043D\u043E\u0435
-    \u0431\u0440\u0435\u0432\u043D\u043E"
+  itemSprite: {fileID: 21300000, guid: 456b29d19940aeb4891d44ea2671cedc, type: 3}
+  itemShowName: "\u0431\u0440\u0435\u0432\u043D\u043E"
   maxAmount: 4
   itemDescription: "\u0418 \u0447\u0442\u043E \u0441 \u044D\u0442\u0438\u043C \u0434\u0435\u043B\u0430\u0442\u044C?"
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 6278427330254225391, guid: 5994e194ce90df744a5e7263ceeb38d1, type: 3}
+  health: 0
+  hungry: 0
+  endurance: 0
+  damage: 0
