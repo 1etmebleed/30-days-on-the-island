@@ -12,19 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a870fc4c641e2404b876700bb2187606, type: 3}
   m_Name: siroyezhkaMushroom
   m_EditorClassIdentifier: 
+  id: 13
   isDefault: 0
   isWeapons: 0
   isFood: 1
   isTool: 0
   isUsed: 1
   itemType: 2
-  itemGO: {fileID: 2350112549994020148, guid: c8234f030cf4efb47b9520b391eee470, type: 3}
+  itemGO: {fileID: 2350112549994020148, guid: 470d24f4afa74914ea45e51459573b14, type: 3}
   itemSprite: {fileID: 21300000, guid: 9658c83a1bffe024eaa09d2a6617c801, type: 3}
   itemShowName: "\u0421\u044B\u0440\u043E\u0435\u0436\u043A\u0430"
   maxAmount: 20
   itemDescription: "\u041D\u0435 \u0435\u0441\u0442\u044C \u0441\u044B\u0440\u044B\u043C"
-  itemPrefab: {fileID: 2350112549994020148, guid: c8234f030cf4efb47b9520b391eee470, type: 3}
-  health: 1
+  itemPrefab: {fileID: 2350112549994020148, guid: 470d24f4afa74914ea45e51459573b14, type: 3}
+  health: -1
   hungry: 1
+  nameForCook:
+  - siroyezhka
+  - goodMushroom
   endurance: 0
   damage: 0

@@ -12,20 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a870fc4c641e2404b876700bb2187606, type: 3}
   m_Name: WhiteMushroom
   m_EditorClassIdentifier: 
+  id: 15
   isDefault: 0
   isWeapons: 0
   isFood: 1
   isTool: 0
   isUsed: 1
   itemType: 2
-  itemGO: {fileID: 4766821006204643618, guid: 3d027a60dd190bf42a09cea634f8acfa, type: 3}
+  itemGO: {fileID: 3307544854827399835, guid: 14bb20f51d400ba44bd5908a0cdf0dd4, type: 3}
   itemSprite: {fileID: 21300000, guid: 6a6f3fe072f98b149bb9c4c619ac2f1d, type: 3}
   itemShowName: "\u0411\u0435\u043B\u044B\u0439 \u0433\u0440\u0438\u0431"
   maxAmount: 20
   itemDescription: "\u0411\u043E\u043B\u044C\u0448\u043E\u0439 \u0432\u043A\u0443\u0441\u043D\u044B\u0439
     \u0433\u0440\u0438\u0431"
-  itemPrefab: {fileID: 4766821006204643618, guid: 3d027a60dd190bf42a09cea634f8acfa, type: 3}
-  health: -1
+  itemPrefab: {fileID: 3307544854827399835, guid: 14bb20f51d400ba44bd5908a0cdf0dd4, type: 3}
+  health: 1
   hungry: 1
+  nameForCook:
+  - whiteMushroom
+  - goodMushroom
   endurance: 0
   damage: 0

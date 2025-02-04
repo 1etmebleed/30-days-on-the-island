@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a870fc4c641e2404b876700bb2187606, type: 3}
+  m_Name: FriedWhiteMushroom
+  m_EditorClassIdentifier: 
+  isDefault: 0
+  isWeapons: 0
+  isFood: 1
+  isTool: 0
+  isUsed: 1
+  itemType: 2
+  itemGO: {fileID: 4630271573489421004, guid: c20db55ef53adc340b503dd66c5fea96, type: 3}
+  itemSprite: {fileID: 21300000, guid: 1966360ecc8fe0c40ab574d86bc7262a, type: 3}
+  itemShowName: "\u0416\u0430\u0440\u0435\u043D\u044B\u0439 \u0431\u0435\u043B\u044B\u0439
+    \u0433\u0440\u0438\u0431"
+  maxAmount: 20
+  itemDescription: "\u041E\u041E\u041E\u0427\u0435\u043D\u044C \u0432\u043A\u0443\u0441\u043D"
+  itemPrefab: {fileID: 4630271573489421004, guid: c20db55ef53adc340b503dd66c5fea96, type: 3}
+  health: 5
+  hungry: 1
+  nameForCook: []
+  endurance: 0
+  damage: 0

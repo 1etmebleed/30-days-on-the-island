@@ -12,19 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a870fc4c641e2404b876700bb2187606, type: 3}
   m_Name: borovik
   m_EditorClassIdentifier: 
+  id: 3
   isDefault: 0
   isWeapons: 0
-  isFood: 0
+  isFood: 1
   isTool: 0
-  isUsed: 0
+  isUsed: 1
   itemType: 0
-  itemGO: {fileID: 0}
-  itemSprite: {fileID: 0}
-  itemShowName: 
-  maxAmount: 0
-  itemDescription: 
-  itemPrefab: {fileID: 0}
-  health: 0
-  hungry: 0
+  itemGO: {fileID: 919132149155446097, guid: c70811b0a073a614a9b3dad1b7803675, type: 3}
+  itemSprite: {fileID: 21300000, guid: cee72cbf7d15f7a4f8fc4c4277501a31, type: 3}
+  itemShowName: "\u0411\u043E\u0440\u043E\u0432\u0438\u043A"
+  maxAmount: 20
+  itemDescription: "\u041F\u043E\u043B\u0435\u0437\u043D\u044B\u0439 \u0438 \u0432\u043A\u0443\u0441\u043D\u044B\u0439
+    \u0433\u0440\u0438\u0431"
+  itemPrefab: {fileID: 919132149155446097, guid: c70811b0a073a614a9b3dad1b7803675, type: 3}
+  health: 1
+  hungry: 1
+  nameForCook:
+  - goodMushroom
+  - borovik
   endurance: 0
   damage: 0

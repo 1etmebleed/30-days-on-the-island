@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a870fc4c641e2404b876700bb2187606, type: 3}
   m_Name: barbarBerry
   m_EditorClassIdentifier: 
+  id: 2
   isDefault: 0
   isWeapons: 0
   isFood: 1
@@ -27,5 +28,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 7336491306546346211, guid: cc6ebad33062c674486ffd5fd8e94891, type: 3}
   health: 1
   hungry: 0
+  nameForCook:
+  - berry
   endurance: 0
   damage: 0

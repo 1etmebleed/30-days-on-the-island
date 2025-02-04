@@ -39,10 +39,25 @@ public class InventorySlot : MonoBehaviour
 
     public Button useButton; //ссылка на кнопку use 
 
+    public bool isDefault;
+    public bool isWeapons;
+    public bool isFood;
+    public bool isTool;
+
+    public void ClearSprite()
+    {
+        item = null; // Убираем ссылку на предмет
+        amount = 0; // Сбрасываем количество
+        gameObject.GetComponent<Image>().sprite = null; // Очищаем спрайт
+        
+    }
     public void Start()
     {
         player = FindObjectOfType<PlayerController>();
-        panelSlot.SetActive(false);
+        if(panelSlot != null )
+        {
+            panelSlot.SetActive(false);
+        }
         UpdateText();
 
         Button button = GetComponent<Button>();
@@ -54,12 +69,15 @@ public class InventorySlot : MonoBehaviour
         //{
             //useButton.onClick.AddListener(() => UseButton());
         //}
+
+        
     }
 
     public void Update()
     {
         UpdateText();
         UIchecker();
+        
     }
 
     private void UpdateText()
@@ -90,6 +108,7 @@ public class InventorySlot : MonoBehaviour
 
     void OpenPanel()
     {
+        GetItemTypeOnSlot();
         panelSlotIsOpen = true;
         panelSlot.SetActive(true);
         currentlyOpenPanel = this; // Устанавливаем текущую открытую панель
@@ -176,7 +195,10 @@ public class InventorySlot : MonoBehaviour
         if (amount == 0)
         {
             gameObject.GetComponent<Image>().sprite = nullPanelSlot;
-            spriteSlotPanel.GetComponent<Image>().sprite = nullPanelSlot;
+            if(spriteSlotPanel != null)
+            {
+                spriteSlotPanel.GetComponent<Image>().sprite = nullPanelSlot;
+            }
         }
 
     }
@@ -191,5 +213,44 @@ public class InventorySlot : MonoBehaviour
 
         // Создаем предмет
         //Instantiate(item.itemPrefab, spawnPosition, Quaternion.identity);
+    }
+    public void GetItemTypeOnSlot()
+    {
+        if (item != null)
+        {
+            if (item.isDefault)
+            {
+                isDefault = true;
+
+                isWeapons = false;
+                isFood = false;
+                isTool = false;
+
+            }
+            else if (item.isWeapons)
+            {
+                isWeapons = true;
+
+                isFood = false;
+                isTool = false;
+                isDefault = false;
+            }
+            else if (item.isFood)
+            {
+                isFood = true;
+
+                isTool = false;
+                isWeapons = false;
+                isDefault = true;
+            }
+            else if (item.isTool)
+            {
+                isTool = true;
+
+                isWeapons = false;
+                isDefault = true;
+                isFood = false;
+            }
+        }
     }
 }

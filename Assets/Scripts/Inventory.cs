@@ -94,7 +94,6 @@ public class Inventory : MonoBehaviour
             if (currentItem != null && itemIsReady == true && _item.itemReady==true)
             {
                 AudioManager.instance.Play("pickupItemSound");
-                Debug.Log("ЛОГИКА ВЫПОЛНЯЕТСЯ");
                 AddItem(currentItem, 1); // Добавляем 1 экземпляр предмета в инвентарь
                 _item.isPicked = true;
                 _item.isDelete = true;
@@ -142,7 +141,6 @@ public class Inventory : MonoBehaviour
             }
         }
 
-        Debug.Log("Нет свободных слотов для добавления предмета: " + item.name);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -160,7 +158,6 @@ public class Inventory : MonoBehaviour
                 currentItem = itemComponent.item; // Предполагаем, что itemData - это ваш ItemScriptableObject
                 itemIsReady = true;
                 isInTrigger = true; // Устанавливаем флаг, что игрок в триггере
-                Debug.Log("Объект вошел в триггер: " + other.name);
             }
         }
     }
@@ -176,7 +173,6 @@ public class Inventory : MonoBehaviour
             itemIsReady = false;
             currentItem = null; // Сбрасываем текущий предмет
             _item = null;
-            Debug.Log("Объект вышел из триггера: " + other.name);
         }
     }
 

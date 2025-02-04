@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586dab1bda1d1264797e4d301d51fc4c, type: 3}
+  m_Name: FishAndMushroomsRecipe
+  m_EditorClassIdentifier: 
+  profession: all
+  skull: all
+  countComponent: 2
+  foodComponents1:
+  - {fileID: 11400000, guid: c3647f2e6dcdd47439d39d377cc76e19, type: 2}
+  foodNeedCount1: 1
+  foodComponents2:
+  - {fileID: 11400000, guid: 129717c0f96c5af4ea079a60ae81243d, type: 2}
+  - {fileID: 11400000, guid: 9703745bb8ffd734e8ceab1fef15408d, type: 2}
+  - {fileID: 11400000, guid: f16fcb1ffb2507642a251dd17431b7ff, type: 2}
+  - {fileID: 11400000, guid: 629bef7a8ca98c24cb8839c2f085bf7b, type: 2}
+  foodNeedCount2: 0
+  foodComponents3: []
+  foodNeedCount3: 0
+  resultCook: {fileID: 11400000, guid: ef1a3f23ade23394cb7b0141026705d1, type: 2}
+  foodCountCooked: 1
+  sprite: {fileID: 21300000, guid: 63d2b88e7284e634697fc0462fbf583f, type: 3}
+  spritesTags: []
+  description: "\u0421\u043E\u0447\u043D\u044B\u0435 \u0433\u0440\u0438\u0431\u044B
+    \u0441 \u0436\u0430\u0440\u0435\u043D\u043E\u0439 \u0440\u044B\u0431\u043E\u0439"
+  title: "\u0416\u0430\u0440\u0435\u043D\u0430\u044F \u0440\u044B\u0431\u0430 \u0441
+    \u0433\u0440\u0438\u0431\u0430\u043C\u0438"
+  buffTags: []
+  hungry: 5
+  health: 2

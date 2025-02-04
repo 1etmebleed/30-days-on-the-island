@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586dab1bda1d1264797e4d301d51fc4c, type: 3}
+  m_Name: FriedMushrooms
+  m_EditorClassIdentifier: 
+  profession: all
+  skull: all
+  countComponent: 3
+  foodComponents1:
+  - {fileID: 11400000, guid: 129717c0f96c5af4ea079a60ae81243d, type: 2}
+  - {fileID: 11400000, guid: 9703745bb8ffd734e8ceab1fef15408d, type: 2}
+  - {fileID: 11400000, guid: f16fcb1ffb2507642a251dd17431b7ff, type: 2}
+  - {fileID: 11400000, guid: 629bef7a8ca98c24cb8839c2f085bf7b, type: 2}
+  - {fileID: 11400000, guid: 067db619d0ba00347b595e0b13339883, type: 2}
+  foodNeedCount1: 0
+  foodComponents2:
+  - {fileID: 11400000, guid: 629bef7a8ca98c24cb8839c2f085bf7b, type: 2}
+  - {fileID: 11400000, guid: 9703745bb8ffd734e8ceab1fef15408d, type: 2}
+  - {fileID: 11400000, guid: f16fcb1ffb2507642a251dd17431b7ff, type: 2}
+  - {fileID: 11400000, guid: 129717c0f96c5af4ea079a60ae81243d, type: 2}
+  - {fileID: 11400000, guid: 067db619d0ba00347b595e0b13339883, type: 2}
+  foodNeedCount2: 0
+  foodComponents3:
+  - {fileID: 11400000, guid: 629bef7a8ca98c24cb8839c2f085bf7b, type: 2}
+  - {fileID: 11400000, guid: f16fcb1ffb2507642a251dd17431b7ff, type: 2}
+  - {fileID: 11400000, guid: 9703745bb8ffd734e8ceab1fef15408d, type: 2}
+  - {fileID: 11400000, guid: 067db619d0ba00347b595e0b13339883, type: 2}
+  - {fileID: 11400000, guid: 129717c0f96c5af4ea079a60ae81243d, type: 2}
+  foodNeedCount3: 0
+  resultCook: {fileID: 11400000, guid: 2f8ec2a4b0eed6f4abdddf1e07e29cbe, type: 2}
+  foodCountCooked: 1
+  sprite: {fileID: 21300000, guid: b5ba8db1ae74b054f93cafcc4ea0413a, type: 3}
+  spritesTags: []
+  description: "\u0416\u0430\u0440\u0435\u043D\u044B\u0435 \u0433\u0440\u0438\u0431\u044B"
+  title: "\u041E\u0447\u0435\u043D\u044C \u043F\u0440\u043E\u0441\u0442\u043E \u043F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u0438\u0442\u044C"
+  buffTags:
+  - goodMood
+  hungry: 5
+  health: 1

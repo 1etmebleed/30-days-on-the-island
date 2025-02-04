@@ -6,6 +6,8 @@ using UnityEngine;
 public enum Itemtype { Default, Weapons, Food, Tool }
 public class ItemScriptableObject : ScriptableObject
 {
+    public int id;
+
     [Header("Тип обьекта ТОЛЬКО ОДИН!")]
     public bool isDefault;
     public bool isWeapons;
@@ -26,6 +28,7 @@ public class ItemScriptableObject : ScriptableObject
     [Header("Настройки для еды, если это еда!")]
     public int health;
     public int hungry;
+    public string[] nameForCook;
 
 
     [Header("Настройки для инструмента, если это инструмент!")]

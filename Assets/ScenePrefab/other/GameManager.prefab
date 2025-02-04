@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 786.2116, y: 80.745636, z: 116.45978}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4532085, y: 0.4532085, z: 0.4532085}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -47,3 +47,7 @@ MonoBehaviour:
   cursorTexture: {fileID: 2800000, guid: 30ca72563fd26db4aab98f426d389155, type: 3}
   hotSpot: {x: 0, y: 0}
   panelCook: {fileID: 0}
+  recipePanels:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
